@@ -53,32 +53,36 @@ LIVE LINK:
 
 INSTALLATION, USAGE & MOCK-UP:
 
-🎗 Terminal
+The apps used to run
 
-🎗 Git
+🎗Node.js
+
+🎗Console.Table
+
+🎗MYSQL
+
+🎗MYSQL2
+
+🎗Inquire Package
+
+-run "npm i" to install the modules
+
+-run "source db/schema.sql" and "source db/seed.sql' to seed the database
+
+-run "node server.js". It will prompt you to choose from Depatartment, Roles, Employees. Fom there you can manage the different sections, be it adding, or deleting.
+
+🎗 Terminal
 
 🎗 GitHub
 
-🎗 GitHub Pages
-
 🎗 Visual Studio (VS) Code
 
-🎗 HTML
+🎗 Screencastify for video
 
-🎗 CSS
-
-🎗 Screencastify for mock-up GIF
-
-🎗 javaScript
-
-🎗 moment.js
-
-🎗 API key
+🎗 
 
 CREDITS:
-https://openweathermap.org/
 
-The Instructors and fellow bootcampers at the U Of M, it's always fun collaborating with eachother.
 
 LICENSE:
 
@@ -86,17 +90,11 @@ MIT LICENSE
 
 FEATURES:
 
-🎗 Uses a GIF to show features.
+🎗 Uses a video to show features.
 
 🎗 Acessable design.
 
 🎗 Visually appealing.
-
-🎗 Displays the date.
-
-🎗 The API retrieves weather data.
-
-🎗 Fetches temperature, wind-speed, humidity and displays rain or shine icons.
 
 🎗 These features enhance user experience.
 
