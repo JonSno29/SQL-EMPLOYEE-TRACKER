@@ -1,6 +1,8 @@
-OVERVIEW:
+# SQL_EMPLOYEE_TRACKER
 
-USER STORY:
+## OVERVIEW:
+
+## USER STORY:
 
 AS A business owner
 
@@ -9,7 +11,7 @@ I WANT to be able to view and manage the departments, roles, and employees in my
 SO THAT I can organize and plan my business
 
 
-ACCEPTANCE CRITERIA:
+## ACCEPTANCE CRITERIA:
 
 GIVEN a command-line application that accepts user input
 
@@ -49,9 +51,9 @@ WHEN I choose to update an employee role
 
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 
-LIVE LINK:
+## LIVE LINK:
 
-INSTALLATION, USAGE & MOCK-UP:
+## INSTALLATION, USAGE & MOCK-UP:
 
 The apps used to run
 
@@ -81,10 +83,10 @@ The apps used to run
 
 🎗 
 
-CREDITS:
+## CREDITS:
 
 
-LICENSE:
+## LICENSE:
 
 MIT License
 Copyright (c) 2014 Gleb Bahmutov
@@ -95,7 +97,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-FEATURES:
+## FEATURES:
 
 🎗 Uses a video to show features.
 
@@ -105,13 +107,13 @@ FEATURES:
 
 🎗 These features enhance user experience.
 
-HOW TO CONTRIBUTE:
+## HOW TO CONTRIBUTE:
 
 Fork my repositories so I can fork yours:
 
 Use the "scout rule" to help others.
 
-TESTS:
+## TESTS:
 
 🎗 Trial and error
 
@@ -119,6 +121,6 @@ TESTS:
 
 🎗 JEST
 
-CONTACT:
+## CONTACT:
 
 Snoverjon@gmail.com
