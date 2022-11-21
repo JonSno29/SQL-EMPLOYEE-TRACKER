@@ -34,7 +34,7 @@ const startPrompt = () => {
     return inquirer.prompt([{
         name: 'action',
         type: 'list',
-        message: 'What would you like to do?',
+        message: 'WHAT WOULD YOU LIKE TO DO?',
         choices: ["View All Departments", "View All Roles", "View All Employees", "Add Department", "Add Role", "Add Employee", "Update Employee Role"]
     }]).then(function(val) {
         switch (val.action) {
@@ -139,7 +139,7 @@ const addDepartment = () => {
     inquirer.prompt([{
         name: "Name",
         type: "input",
-        message: "What department would you like to add?"
+        message: "WHAT DEPARTMENT WOULD YOU LIKE TO ADD?"
     }]).then(function(res) {
         const query = "INSERT INTO departments SET ?";
         db.query(
@@ -201,7 +201,7 @@ const addRole = () => {
             {
                 name: "Salary",
                 type: "input",
-                message: "What is the Salary?"
+                message: "WHAT IS THE SALARY?"
             }
         ]).then(function(res) {
             db.query(
@@ -221,7 +221,7 @@ const addRole = () => {
 
 // addEmployee function
 const addEmployee = () => {
-    figlet("ADD  EMPLOYEE", function(err, res) {
+    figlet("ADD EMPLOYEE", function(err, res) {
         if (err) {
             console.log('Something went wrong...');
             console.dir(err);
@@ -232,23 +232,23 @@ const addEmployee = () => {
     inquirer.prompt([{
             name: "first_name",
             type: "input",
-            message: "Enter employee first name"
+            message: "PLEASE ENTER THE EMPLOYEE FIRST NAME"
         },
         {
             name: "last_name",
             type: "input",
-            message: "Enter employee last name"
+            message: "PLEASE ENTER THE EMPLOYEE LAST NAME"
         },
         {
             name: "role",
             type: "list",
-            message: "What is this employees role?",
+            message: "WHAT IS THIS EMPLOYEES ROLE?",
             choices: selectRole()
         },
         {
             name: "choice",
             type: "list",
-            message: "Who is this employees manager?",
+            message: "WHO IS THIS EMPLOYEES MANAGER?",
             choices: selectManager()
         }
     ]).then(function(val) {
@@ -290,12 +290,12 @@ const updateEmployee = () => {
                     }
                     return lastName;
                 },
-                message: "What is the Employee's last name?",
+                message: "WHAT IS THE EMPLOYEE LAST NAME?",
             },
             {
                 name: "role",
                 type: "rawlist",
-                message: "What is the Employees new title?",
+                message: "WHAT IS THIS EMPLOYEE TITLE?",
                 choices: selectRole()
             },
         ]).then(function(val) {
