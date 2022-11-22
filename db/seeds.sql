@@ -18,7 +18,7 @@ VALUES (1, "Sales Lead", 40000),
 
 -- EMPLOYEES
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES ("Jon", "Snover", 1, BOSSMAN),
+VALUES ("Jon", "Snover", 1, 1),
        ("John", "Doenut", 2, 1),
        ("Bill", "Gates", 3, 2),
        ("Issac", "Newton", 4, 2),
