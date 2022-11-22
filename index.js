@@ -19,7 +19,7 @@ db.connect(function(err) {
     startPrompt();
 });
 
-// Figlet to show "EMPLOYEE TRACKER" in cool line format
+// Figlet to show "EMPLOYEE TRACKER" in new format
 figlet("EMPLOYEE  TRACKER", function(err, res) {
     if (err) {
         console.log('Something went wrong...');
@@ -347,118 +347,5 @@ employeeDepartment = () => {
         console.table(rows);
         promptUser();
     });
-};
+}
 
-// function to delete department
-deleteDepartment = () => {
-    const deptSql = `select * from department`;
-
-    connection.promise().query(deptSql, (err, data) => {
-        if (err) throw err;
-
-        const dept = data.map(({ name, id }) => ({ name: name, value: id }));
-
-        inquirer.prompt([
-            {
-                type: 'list',
-                name: 'dept',
-                message: "What department do you want to delete?",
-                choices: dept
-            }
-        ])
-            .then(deptChoice => {
-                const dept = deptChoice.dept;
-                const sql = `delete from department WHERE id = ?`;
-
-                connection.query(sql, dept, (err, result) => {
-                    if (err) throw err;
-                    console.log("It deleted Successfully!");
-
-                    showDepartments();
-                });
-            });
-    });
-};
-
-// function to delete role
-deleteRole = () => {
-    const roleSql = `select * from role`;
-
-    connection.promise().query(roleSql, (err, data) => {
-        if (err) throw err;
-
-        const role = data.map(({ title, id }) => ({ name: title, value: id }));
-
-        inquirer.prompt([
-            {
-                type: 'list',
-                name: 'role',
-                message: "What role do you want to delete?",
-                choices: role
-            }
-        ])
-            .then(roleChoice => {
-                const role = roleChoice.role;
-                const sql = `delete from role where id = ?`;
-
-                connection.query(sql, role, (err, result) => {
-                    if (err) throw err;
-                    console.log("It was deleted Successfully!");
-
-                    showRoles();
-                });
-            });
-    });
-};
-
-// function to delete employees
-deleteEmployee = () => {
-    // get employees from employee table 
-    const employeeSql = `select * from employee`;
-
-    connection.promise().query(employeeSql, (err, data) => {
-        if (err) throw err;
-
-        const employees = data.map(({ id, first_name, last_name }) => 
-        ({ name: first_name + " " + last_name, value: id }));
-
-        inquirer.prompt([
-            {
-                type: 'list',
-                name: 'name',
-                message: "Which employee would you like to delete?",
-                choices: employees
-            }
-        ])
-            .then(empChoice => {
-                const employee = empChoice.name;
-
-                const sql = `delete from employee WHERE id = ?`;
-
-                connection.query(sql, employee, (err, result) => {
-                    if (err) throw err;
-                    console.log("The employee was successfully deleted!");
-
-                    showEmployees();
-                });
-            });
-    });
-};
-
-// view department budget 
-viewBudget = () => {
-    console.log('Showing budget by department...\n');
-
-    const sql = `select department_id AS id, 
-                      department.name AS department,
-                      SUM(salary) AS budget
-               from role  
-               join department ON role.department_id = department.id GROUP BY  department_id`;
-
-    connection.promise().query(sql, (err, rows) => {
-        if (err) throw err;
-        console.table(rows);
-
-        promptUser();
-    });
-};
