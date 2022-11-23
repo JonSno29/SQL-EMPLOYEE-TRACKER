@@ -83,7 +83,11 @@ this information is updated in the database
 
 ## LIVE LINK:
 
+GITHUB REPO:
+
 https://github.com/JonSno29/SQL-EMPLOYEE-TRACKER.git
+
+VIDEO:
 
 https://drive.google.com/file/d/17F2L8q2mrUED0qNUkoziiU5hbEab2xCE/view
 
