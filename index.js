@@ -66,7 +66,8 @@ const startPrompt = () => {
             case "Update Employee Role":
                 updateEmployee();
                 break;
-        }
+                
+        }       
     });
 }
 
@@ -247,7 +248,7 @@ const addEmployee = () => {
             choices: selectRole()
         },
         {
-            name: "choice",
+            name: "managerId",
             type: "list",
             message: "WHO IS THIS EMPLOYEES MANAGER?",
             choices: selectManager()
@@ -332,20 +333,3 @@ const updateEmployee = () => {
             });
     });
 };
-// function to view employee by department
-employeeDepartment = () => {
-    console.log('Showing employee by departments...\n');
-    const sql = `select employee.first_name, 
-                      employee.last_name, 
-                      department.name AS department
-               from employee 
-               left join role ON employee.role_id = role.id 
-               left join department ON role.department_id = department.id`;
-
-    connection.promise().query(sql, (err, rows) => {
-        if (err) throw err;
-        console.table(rows);
-        promptUser();
-    });
-}
-

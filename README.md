@@ -53,19 +53,25 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## LIVE LINK:
 
+https://github.com/JonSno29/SQL-EMPLOYEE-TRACKER.git
+
+https://drive.google.com/file/d/17F2L8q2mrUED0qNUkoziiU5hbEab2xCE/view
+
+
+
 ## INSTALLATION, USAGE & MOCK-UP:
 
 The apps used to run
 
-🎗Node.js
+🎗 Node.js
 
-🎗Console.Table
+🎗 Console.Table
 
-🎗MYSQL
+🎗 MYSQL
 
-🎗MYSQL2
+🎗 MYSQL2
 
-🎗Inquire Package
+🎗 Inquire Package
 
 -run "npm i" to install the modules
 
@@ -73,15 +79,6 @@ The apps used to run
 
 -run "node server.js". It will prompt you to choose from Depatartment, Roles, Employees. Fom there you can manage the different sections, be it adding, or deleting.
 
-🎗 Terminal
-
-🎗 GitHub
-
-🎗 Visual Studio (VS) Code
-
-🎗 Screencastify for video
-
-🎗 
 
 ## CREDITS:
 
